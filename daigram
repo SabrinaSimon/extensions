@@ -1,0 +1,21 @@
++-----------------------------+
+|       NeoCrux Extension     |
+|                             |
+|  +----------------------+   |
+|  | settings.json        |   |
+|  |  - plugins[]         |<---- User-defined config
+|  +----------------------+   |
+|                             |
+|  +----------------------+   |
+|  | pluginManager.ts     |   |
+|  |  - Load config       |<-------- Uses NeoCrux API (safe JSONC)
+|  |  - Register commands |   |
+|  +----------------------+   |
+|                             |
+|  +----------------------+   |
+|  | connector.ts         |   |
+|  |  - Fetch tool data   |<--- plugin.baseUrl, headers
+|  |  - Transform format  |<--- plugin.parsingRules
+|  +----------------------+   |
+|                             |
++-----------------------------+
